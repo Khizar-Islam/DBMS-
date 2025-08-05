@@ -11,21 +11,21 @@ CREATE TABLE books(
 
 INSERT INTO books(title, author, year_published, isAvailable, price, publication)
 values
-    ('The Great Book', 'John Doe', 2001, TRUE, 450.00, 'XYZ'),
-	('1984', 'George Orwell', 1949, TRUE, 550.00, 'Secker & Warburg'),
-	('To Kill a Mockingbird', 'Harper Lee', 1960, FALSE, 320.00, 'J.B. Lippincott'),
-	('The Catcher in the Rye', 'J.D. Salinger', 1951, TRUE, 290.00, 'Little, Brown'),
-	('The Hobbit', 'J.R.R. Tolkien', 1937, FALSE, 499.99, 'George Allen & Unwin'),
-	('The Da Vinci Code', 'Dan Brown', 2003, TRUE, 750.00, 'Doubleday'),
-	('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 1997, FALSE, 699.00, 'Bloomsbury'),
-	('The Hunger Games', 'Suzanne Collins', 2008, TRUE, 525.00, 'Scholastic'),
-	('A Game of Thrones', 'George R.R. Martin', 1996, TRUE, 599.00, 'Bantam Spectra'),
-	('The Fault in Our Stars', 'John Green', 2012, TRUE, 430.00, 'Dutton'),
-	('The Alchemist', 'Paulo Coelho', 1988, TRUE, 350.00, 'XYZ'),
-	('Inferno', 'Dan Brown', 2013, FALSE, 810.00, 'Doubleday'),
-	('Gone Girl', 'Gillian Flynn', 2012, TRUE, 460.00, 'Crown Publishing'),
-	('The Book Thief', 'Markus Zusak', 2005, FALSE, 390.00, 'Knopf'),
-	('XYZ Science Guide', 'Jane Roe', 2021, TRUE, 580.00, 'XYZ');
+    ('The Great Escape', 'John Maxwell', 2010, true, 499.00, 'Penguin'),
+('A Tale of Two Cities', 'Charles Dickens', 1859, true, 299.00, 'HarperCollins'),
+('1984', 'George Orwell', 1949, true, 549.00, 'ABC'),
+('The Book Thief', 'Markus Zusak', 2005, false, 599.00, 'XYZ'),
+('To Kill a Mockingbird', 'Harper Lee', 1960, true, 449.00, 'Penguin'),
+('The Silent Patient', 'Alex Michaelides', 2019, true, 559.00, 'XYZ'),
+('Brave New World', 'Aldous Huxley', 1932, false, 325.00, 'RandomHouse'),
+('The Midnight Library', 'Matt Haig', 2020, true, 599.00, 'Vintage'),
+('The Alchemist', 'Paulo Coelho', 1988, true, 349.00, 'HarperCollins'),
+('The Kite Runner', 'Khaled Hosseini', 2003, false, 379.00, 'ABC'),
+('Atomic Habits', 'James Clear', 2018, true, 499.00, 'Penguin'),
+('The Psychology of Money', 'Morgan Housel', 2020, true, 529.00, 'HarperBusiness'),
+('Sapiens', 'Yuval Noah Harari', 2011, true, 569.00, 'Vintage'),
+('Ikigai', 'Francesc Miralles', 2016, true, 289.00, 'Penguin'),
+('Deep Work', 'Cal Newport', 2016, false, 475.00, 'ABC');
 
 SELECT * FROM books
 WHERE year_published > 2000;
@@ -51,6 +51,7 @@ LIMIT 2;
 SELECT * FROM books
 WHERE publication = 'XYZ'
 ORDER BY title ASC;
+
 
 
 
