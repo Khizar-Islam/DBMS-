@@ -39,17 +39,19 @@ ORDER BY price DESC;
 -- 7. Select top 3 most expensive book
 SELECT * FROM books
 ORDER BY price DESC
-LIMIT 3
+LIMIT 3;
 
 -- 8. Select 2 books skipping first 2, ordered by year descending
 SELECT * FROM books
 ORDER BY year_published DESC
 OFFSET 2
-LIMIT 2
+LIMIT 2;
 
 -- 9. Select all books from publication 'XYZ', ordered by title 
 SELECT * FROM books
 WHERE publication = 'XYZ'
 ORDER BY title ASC;
+
+
 
 
