@@ -1,3 +1,5 @@
+--Khizar Islam , 3rd assignment
+
 CREATE TABLE departments (
     dept_id INT PRIMARY KEY,
     dept_name VARCHAR(100) NOT NULL,
@@ -35,7 +37,7 @@ INSERT INTO departments (dept_id, dept_name, location) VALUES
 (2, 'Information Technology', 'San Francisco'),
 (3, 'Finance', 'Chicago'),
 (4, 'Marketing', 'Los Angeles'),
-(5, 'Research & Development', 'Boston'); -- Department with no employees
+(5, 'Research & Development', 'Boston'); -- This department will have no employees
 
 INSERT INTO employees (emp_id, emp_name, salary, dept_id, hire_date) VALUES
 (101, 'John Smith', 65000.00, 1, '2022-01-15'),
@@ -43,8 +45,8 @@ INSERT INTO employees (emp_id, emp_name, salary, dept_id, hire_date) VALUES
 (103, 'Mike Davis', 75000.00, 2, '2023-03-20'),
 (104, 'Lisa Wilson', 70000.00, 3, '2022-11-05'),
 (105, 'David Brown', 90000.00, 2, '2020-08-30'),
-(108, 'Jennifer Lee', 55000.00, NULL, '2023-05-25'),
-(109, 'Michael Anderson', 60000.00, NULL, '2023-02-14');
+(108, 'Jennifer Lee', 55000.00, NULL, '2023-05-25'),--employee with no depart
+(109, 'Michael Anderson', 60000.00, NULL, '2023-02-14');--employee with no depart
 
 INSERT INTO projects (project_id, project_name, budget, start_date, end_date) VALUES
 (201, 'Website Redesign', 150000.00, '2023-01-01', '2023-06-30'),
@@ -195,7 +197,7 @@ RIGHT JOIN is less commonly used than LEFT JOIN for several reasons:
 
 */
 
--- VERIFICATION QUERIES (Optional - to verify sample data covers all scenarios)
+-- VERIFICATION QUERIES (Optional)
 
 -- Verify we have employees without departments
 SELECT 'Employees without departments:' AS description, COUNT(*) AS count
@@ -220,4 +222,5 @@ UNION ALL
 SELECT 'Employees without projects:', COUNT(*)
 FROM employees e
 LEFT JOIN employee_projects ep ON e.emp_id = ep.emp_id
+
 WHERE ep.emp_id IS NULL;
