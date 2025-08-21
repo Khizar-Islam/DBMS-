@@ -197,30 +197,3 @@ RIGHT JOIN is less commonly used than LEFT JOIN for several reasons:
 
 */
 
--- VERIFICATION QUERIES (Optional)
-
--- Verify we have employees without departments
-SELECT 'Employees without departments:' AS description, COUNT(*) AS count
-FROM employees WHERE dept_id IS NULL
-UNION ALL
-
--- Verify we have departments without employees  
-SELECT 'Departments without employees:', COUNT(*)
-FROM departments d
-LEFT JOIN employees e ON d.dept_id = e.dept_id
-WHERE e.dept_id IS NULL
-UNION ALL
-
--- Verify we have projects without employees
-SELECT 'Projects without employees:', COUNT(*)
-FROM projects p
-LEFT JOIN employee_projects ep ON p.project_id = ep.project_id
-WHERE ep.project_id IS NULL
-UNION ALL
-
--- Verify we have employees without projects
-SELECT 'Employees without projects:', COUNT(*)
-FROM employees e
-LEFT JOIN employee_projects ep ON e.emp_id = ep.emp_id
-
-WHERE ep.emp_id IS NULL;
